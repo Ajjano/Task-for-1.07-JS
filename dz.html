@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /************1************/
+    // let old=parseInt(prompt('Enter how you old? '));
+    // function HowOld(x) {
+    //     if(x>=0&&x<3){
+    //         return 'You are child';
+    //     }else if (x>=12&&x<=18){
+    //         return 'You are teenager';
+    //     }else if (x>18&&x<=60) {
+    //         return 'You are adult';
+    //     }else
+    //         return 'You are retiree';
+    // }
+    //
+    // console.log(HowOld(old));
+
+    /************2************/
+    // let number;
+    // do{
+    //     number=parseInt(prompt('Enter number between 0-9: '));
+    // }while (number<0||number>9);
+    //
+    // function NumberToSign(number) {
+    //     switch (number) {
+    //         case 1:
+    //             return '!';
+    //         case 2:
+    //             return '@';
+    //         case 3:
+    //             return '#';
+    //         case 4:
+    //             return '$';
+    //         case 5:
+    //             return '%';
+    //         case 6:
+    //             return '^';
+    //         case 7:
+    //             return '&';
+    //         case 8:
+    //             return '*';
+    //         case 9:
+    //             return '(';
+    //         case 0:
+    //             return ')';
+    //
+    //     }
+    // }
+    // console.log(NumberToSign(number));
+
+    // /****************3***************/
+    // let number = prompt('Enter a 3x number: ');
+    //
+    // // let first=parseInt(number/100);
+    // // let second=parseInt((number-first*100)/10);
+    // // let third=(number-first*100)%10;
+    // // let new(third+''+second+''+first);
+    // let arrayOfRepeat=[];
+    // for(let i=0;i<number.length;i++){
+    //     let repeat=1;
+    //     for(let n=i+1;n<number.length;n++) {
+    //         if(number[i]==number[n]) {
+    //             repeat++;
+    //         }
+    //     }
+    //     let inArr=false;
+    //     for(let k=0;k<arrayOfRepeat.length;k++){
+    //         if(number[i]==arrayOfRepeat[k]){
+    //             inArr=true;
+    //         }
+    //     }
+    //     if(!inArr) {
+    //         console.log(`${number[i]} repeats ${repeat} times`);
+    //         arrayOfRepeat[arrayOfRepeat.length]=number[i];
+    //     }
+    //
+    // }
+
+    /**************4****************/
+    // let year=parseInt(prompt('Enter a year: '));
+    // let isLeap=(year%400==0||(year%4==0&&year%100!=0))?true:false;
+    //
+    // if(isLeap) {
+    //     console.log(`${year} is a leap year`);
+    // }else {
+    //     console.log(`${year} is not a leap year`);
+    // }
+
+    /******************5****************/
+    // let palinom=true;
+    // let number=prompt('Enter a 5x number: ');
+    // for (let i=0,n=number.length-1;i<number.length,n>=0;i++,n--){
+    //     if(number[i]!=number[n]) {
+    //         palinom=false;
+    //         break;
+    //     }
+    // }
+    // if(palinom) {
+    //     console.log(`${number} is a palinom`);
+    //
+    // }else {
+    //     console.log(`${number} is not a palinom`);
+    // }
+
+    /****************6***************/
+    // let usd=parseInt(prompt('Enter amount of usd: '));
+    // let type=parseInt(prompt('Enter currency you want to convert: 1 - eur, 2 - uan, 3 - azn: '));
+    // switch (type){
+    //     case 1:
+    //         console.log(`eur - ${usd*0.89}`);
+    //         break;
+    //     case 2:
+    //         console.log(`uan - ${usd*25.83}`);
+    //         break;
+    //     case 3:
+    //         console.log(`azn - ${usd*1.7}`);
+    //         break;
+    // }
+
+    /******************7*****************/
+    // let sumSale=parseInt(prompt('Enter sum of your purchare: '));
+    // if(sumSale>=200&&sumSale<300){
+    //     console.log(`your discount: 3%. For payment - ${sumSale*0.97}`);
+    // }else if(sumSale>=300&&sumSale<500) {
+    //     console.log(`your discount: 5%. For payment - ${sumSale*0.95}`);
+    // }else if(sumSale>=500){
+    //     console.log(`your discount: 7%. For payment - ${sumSale*0.93}`);
+    // }
+
+    /****************8***************/
+    // let lengthOfCircle=parseInt(prompt('Enter a length of circle: '));
+    // let perimeterOfSquare=parseInt(prompt('Enter a perimeter of square: '));
+    // if(perimeterOfSquare/4>lengthOfCircle/Math.PI) {
+    //     console.log('Circle is placed into square');
+    // }else{
+    //     console.log('Circle is not placed into square');
+    // }
+
+    /*****************9******************/
+    // let answer1=prompt('What is button to right of button "N": ');
+    // let answer2=prompt('What is button to the left of button "K": ');
+    // let answer3=prompt('What is button to the down of button "/": ');
+    //
+    // let res=0;
+    // if(answer1.toUpperCase()=='M'){
+    //     res+=2;
+    // }
+    // if(answer2.toUpperCase()=='J'){
+    //     res+=2;
+    // }
+    // if(answer3=='8'){
+    //     res+=2;
+    // }
+    //
+    // console.log(`Your result: ${res}`);
+
+    /*************10****************/
+    let year=parseInt(prompt('Enter a year: '));
+    let month=parseInt(prompt('Enter a month: '));
+    let day;
+    do {
+        day = parseInt(prompt('Enter a day: '));
+    }while(((month==4||month==6||month==9||month==11)&&day>30)||
+    (day>28&&month==2&&(year%400!=0||
+        (year%4!=0&&year%100==0)))||(day>29&&month==2&&day==28&&month==2&&(year%400==0||(year%4==0&&year%100!=0))));
+
+    if(day==28&&month==2&&(year%400!=0||(year%4!=0&&year%100==0))) {
+        day=1;
+        month=3;
+    }
+    else if(day==28&&month==2&&(year%400==0||(year%4==0&&year%100!=0))){
+        day=29;
+    }
+    else if(day==30){
+        if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
+            day=31;
+        }
+        else {
+            day=1;
+            month++;
+            if(month>12){
+                month--;
+                year++;
+            }
+        }
+    }
+    else if (day==31){
+        day=1;
+        month++;
+        if(month>12){
+            month=1;
+            year++;
+        }
+    }
+    else {
+        day++;
+    }
+    console.log(`Next data: ${day}/${month}/${year}`);
+</script>
+</body>
+</html>
